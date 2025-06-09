@@ -40,13 +40,13 @@ Grant camera permissions when prompted.
 /jni: Contains native-lib.cpp for OpenCV processing (Canny Edge Detection).
 /gl: OpenGL rendering is handled in CameraGLSurfaceView.java with vertex and fragment shaders.
 # Frame Flow:
- Camera2 API captures frames via GLSurfaceView.
- Frames are passed to native code via JNI (processFrame).
- OpenCV in C++ applies Canny Edge Detection (or passes raw frame if toggled off).
- Processed frame is rendered as a texture using OpenGL ES 2.0.
+ 1. Camera2 API captures frames via GLSurfaceView.
+ 2. Frames are passed to native code via JNI (processFrame).
+ 3. OpenCV in C++ applies Canny Edge Detection (or passes raw frame if toggled off).
+ 4. Processed frame is rendered as a texture using OpenGL ES 2.0.
 
 # Notes
- The app achieves 10-15 FPS on most devices, as verified by the FPS counter.
- The OpenGL pipeline uses GL_TEXTURE_EXTERNAL_OES for camera input and converts to GL_TEXTURE_2D for OpenCV processing and rendering.
- Error handling is minimal for simplicity but can be enhanced for production use.
+ 1. The app achieves 10-15 FPS on most devices, as verified by the FPS counter.
+ 2. The OpenGL pipeline uses GL_TEXTURE_EXTERNAL_OES for camera input and converts to GL_TEXTURE_2D for OpenCV processing and rendering.
+ 3. Error handling is minimal for simplicity but can be enhanced for production use.
 

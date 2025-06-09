@@ -17,22 +17,27 @@ FPS counter displayed on the UI.
 Android Studio with NDK and CMake installed.
 Download OpenCV Android SDK (version 4.6.0 or later) from the OpenCV website.
 
-
 2. # Configure OpenCV:
-Extract the OpenCV SDK to a directory (e.g., /path/to/OpenCV-android-sdk).
-Update settings.gradle to include the OpenCV module:
+
+## a. Extract the OpenCV SDK to a directory like /path/to/OpenCV-android-sdk.
+## b. Update settings.gradle to include the OpenCV module using:
+
 include ':opencv'
+
 project(':opencv').projectDir = new File('/path/to/OpenCV-android-sdk/sdk')
 
-Update gradle.properties with the OpenCV SDK path:
+
+## c. Update gradle.properties with the OpenCV SDK path using:
+
 opencvsdk=/path/to/OpenCV-android-sdk
 
 
-Update CMakeLists.txt with the correct OpenCV path:
+## d. Update CMakeLists.txt with the correct OpenCV path using:
+
 set(OpenCV_DIR /path/to/OpenCV-android-sdk/sdk/native/jni)
 
 
-Sync the project in Android Studio.
+## e. Sync the project in Android Studio.
 
 
 3. # Build and Run:

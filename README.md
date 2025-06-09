@@ -22,16 +22,9 @@ Download OpenCV Android SDK (version 4.6.0 or later) from the OpenCV website.
 Extract the OpenCV SDK to a directory (e.g., /path/to/OpenCV-android-sdk).
 Update settings.gradle to include the OpenCV module.
 
-# include ':opencv'
-# project(':opencv').projectDir = new File('/path/to/OpenCV-android-sdk/sdk')
-
-
 Update gradle.properties with the OpenCV SDK path.
-# opencvsdk=/path/to/OpenCV-android-sdk
 
 Update CMakeLists.txt with the correct OpenCV path.
-# set(OpenCV_DIR /path/to/OpenCV-android-sdk/sdk/native/jni)
-
 
 Sync the project in Android Studio.
 
